@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Valeria ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            color: #ff3366;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        .btn {
+            font-size: 1.5em;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .yes-btn {
+            background-color: #ff3366;
+            color: white;
+        }
+        .no-btn {
+            background-color: #cccccc;
+            color: black;
+            position: absolute;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Valeria, ¿quieres ser mi San Valentín? ❤️</h1>
+    <p>Desde el día que te conocí, supe que eras especial. No hay nadie más con quien quisiera pasar este San Valentín.</p>
+
+    <button class="btn yes-btn" onclick="mostrarMensaje()">Sí, por supuesto 💕</button>
+    <button class="btn no-btn" id="noBtn" onmouseover="moverBoton()">No 😢</button>
+
+    <p id="mensaje" class="hidden">¡Sabía que dirías que sí! 💖😍</p>
+
+    <script>
+        function mostrarMensaje() {
+            document.getElementById("mensaje").classList.remove("hidden");
+        }
+
+        function moverBoton() {
+            var x = Math.random() * (window.innerWidth - 100);
+            var y = Math.random() * (window.innerHeight - 50);
+            document.getElementById("noBtn").style.left = x + "px";
+            document.getElementById("noBtn").style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
